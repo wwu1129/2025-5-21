@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>我喜歡的飲料</title>
+</head>
+<body>
+  <h1>我喜歡的飲料</h1>
+  <table border="1" id="drinkTable">
+    <tr>
+      <th>飲料編號</th>
+      <th>飲料名稱</th>
+    </tr>
+  </table>
+  <script>
+    let drinks = [
+      "卡布奇諾咖啡",
+      "拿鐵咖啡",
+      "珍珠奶茶",
+      "長島冰茶",
+      "愛爾蘭咖啡",
+      "藍色夏威夷",
+      "英式水果冰茶"
+    ];
+    let table = document.getElementById("drinkTable");
+    for(let i = 0; i < drinks.length; i++) {
+      let row = table.insertRow();
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      cell1.innerHTML = "飲料" + (i+1);
+      cell2.innerHTML = drinks[i];
+    }
+  </script>
+</body>
+</html>
